@@ -5,69 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    
-    <div class="AppCard">
 
-        <!-- input -->
-        <div class="title">
-            <h1>Weather App</h1>
-            <p>Check Weather searching <span>City Name</span></p>
-        </div>
-        <div class="searchArea">
-            
-            <input id="impTXT" type="text" placeholder="enter city name" spellcheck="false">
-            <!-- search button -->
-            <button type="submit"><img src="search.png"></button>
+    <div class="container">
+        <div class="weather-card">
+            <h1 class="title">Weather App</h1>
+            <p class="subtitle">Enter a city name to check the weather</p>
 
-        </div>
-        <!--         
-        <div>
-            <h4 class="error">Error Finding the city...Search Again</h4>
-        </div>
-         -->
-         
-        <!-- display -->
-        <div class="WeatherDisplay">
-    
-            <img src="" class="Weather-Icon">
-           
-            <h1 class="temperature"></h1>
-            <h2 class="city"></h2>
+            <div class="search-box">
+                <input id="cityInput" type="text" placeholder="Search city..." spellcheck="false">
+                <button id="searchBtn"><img src="search.png"></button>
+            </div>
 
-            <!-- details here -->
-            <div class="detailsInfo">
-                <div class="column">
-                    
-                    <img src="humidity.png">
-                    <div>
+            <p class="error-message">City not found! Try again.</p>
+
+            <div class="weather-info">
+                <img src="" class="weather-icon">
+                <h2 class="city-name"></h2>
+                <h1 class="temperature"></h1>
+
+                <div class="details">
+                    <div class="info">
+                        <img src="humidity.png">
                         <p class="humidity"></p>
                         <p>Humidity</p>
                     </div>
-
-                </div>
-
-                <div class="column">
-                    
-                    <img src="wind.png">
-                    <div>
+                    <div class="info">
+                        <img src="wind.png">
                         <p class="wind"></p>
-                        <p>Wind</p>
+                        <p>Wind Speed</p>
                     </div>
-
                 </div>
-
-
             </div>
         </div>
-        
-
-
     </div>
-
-
 
     <script src="script.js"></script>
 </body>
